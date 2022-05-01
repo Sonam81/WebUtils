@@ -16,7 +16,6 @@ app.get("/", (req, res) => {
 app.post("/process", (req, res) => {
     const type = req.body.type;
     let url = req.body.url;
-    console.log(url.trim().substring(0,8));
     const url_protocol = (url.trim().substring(0,7) == 'http://') ? 'http://' : (url.trim().substring(0,8) == 'https://') ? 'https://' : 'none';
     if (url_protocol === 'none') 
         url = 'https://' + url;
