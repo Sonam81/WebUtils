@@ -17,10 +17,11 @@ app.post("/process", (req, res) => {
     const type = req.body.type;
     let url = req.body.url;
     console.log(url.trim().substring(0,8));
-    if (url.trim().substring(0,8) != 'https://') 
+    const url_protocol = (url.trim().substring(0,7) == 'http://') ? 'http://' : (url.trim().substring(0,8) == 'https://') ? 'https://' : 'none';
+    if (url_protocol === 'none') 
         url = 'https://' + url;
 
-    if (type == 'pdf') {
+    if (type === 'pdf') {
         (async () => {
           const browser = await puppeteer.launch();
           const page = await browser.newPage();
@@ -33,7 +34,7 @@ app.post("/process", (req, res) => {
           res.end();
         })();
 
-    } else if (type == 'screenshot') {
+    } else if (type === 'screenshot') {
         (async () => {
             console.log(url);
             const browser = await puppeteer.launch();

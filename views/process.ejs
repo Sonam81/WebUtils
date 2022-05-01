@@ -1,7 +1,33 @@
-<img src="/screenshots/screenshot1.png" alt="Screenshot">
+<!doctype html>
+<html lang="en">
+<head>
+    <title>WebUtils</title>
 
-<p>URL : <%=url%></p>
-<p>Type : <%=type%></p>
-<a href="/"><button type="button" class="btn btn-primary">Back</button></a>
-<br>
- 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+        * {
+            font-family: Montserrat;
+        }
+        body {
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="text-center">
+        <img src="/screenshots/screenshot1.png" class="rounded mx-auto d-block" alt="Screenshot">
+        <a href=<%=url%>><%=url%></span>
+    </div>
+    <br>
+    <div>
+        <a href="/screenshots/screenshot1.png" class="btn btn-primary" download>Download</a>
+        <a href="/"><button type="button" class="btn btn-danger">Back</button></a>
+    </div>
+</body>
+</html>
