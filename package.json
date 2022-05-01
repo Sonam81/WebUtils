@@ -1,0 +1,29 @@
+{
+  "name": "webutils",
+  "version": "1.0.0",
+  "description": "A web utility tool",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sonam81/WebUtils.git"
+  },
+  "keywords": [
+    "Web",
+    "Utility"
+  ],
+  "author": "sonam81",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sonam81/WebUtils/issues"
+  },
+  "homepage": "https://github.com/Sonam81/WebUtils#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "ejs": "^3.1.7",
+    "express": "^4.18.1",
+    "puppeteer": "^13.7.0"
+  }
+}
